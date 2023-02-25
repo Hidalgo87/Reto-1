@@ -6,7 +6,7 @@ class Controlador
 {
   public LectorArchivo lector;
   public Verificador verificador = new Verificador();
-  public string detectar_archivo(string path_archivo)
+  public string detectar_archivo(string path_archivo) // Detecta el tipo de archivo e instancia objetos de ese tipo como lector
   {
     if (path_archivo.Contains(".txt"))
     {
@@ -44,7 +44,7 @@ class Controlador
     lector.leer_info(direccion, separador);
   }
 
-  public void verificar_invitado(int id)
+  public void verificar_invitado(int id) //El método mas importante, pero carga gran responsabilidad en la clase verificador
   {
     Invitado invitado = buscar_invitado(id);
     try{
@@ -58,17 +58,17 @@ class Controlador
         }
         else
         {
-          Console.WriteLine("Correo inválido");
+          Console.WriteLine("Correo inválido"); //Mensajes de información para el taquillero 
         }
       }
       else
       {
-        Console.WriteLine("Es menor de edad");
+        Console.WriteLine("Es menor de edad"); //Mensajes de información para el taquillero 
       }
     }
     else
     {
-      throw new InvitadoInexistenteError("No existe un invitado con ese ID");
+      throw new InvitadoInexistenteError("No existe un invitado con ese ID"); //NO SE ENCONTRÓ UN INVITADO
     }
   }
     catch (InvitadoInexistenteError)
