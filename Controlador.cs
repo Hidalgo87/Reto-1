@@ -55,15 +55,17 @@ class Controlador
         if(verificador.verificar_correo(invitado))
         {
           Console.WriteLine("Está correctamente registrado y es apto para ingresar");
+        int id_i = Program.solicitar_id(); //flujo continuo
+        verificar_invitado(id_i);
         }
         else
         {
-          Console.WriteLine("Correo inválido"); //Mensajes de información para el taquillero 
+          throw new CorreoInvalidoError("El correo registrado es inválido");//Mensajes de información para el taquillero 
         }
       }
       else
       {
-        Console.WriteLine("Es menor de edad"); //Mensajes de información para el taquillero 
+        throw new InvitadoMenordeEdad("El invitado es menor de edad"); //Mensajes de información para el taquillero 
       }
     }
     else
@@ -73,8 +75,17 @@ class Controlador
   }
     catch (InvitadoInexistenteError)
     {
-      Console.WriteLine("Ingrese nuevamente el ID"); //excepcion manejada lanzando de nuevo el input y la funcion
-      int id_i = Program.solicitar_id();
+      int id_i = Program.solicitar_id(); //excepcion manejada lanzando de nuevo el input y la funcion
+      verificar_invitado(id_i);
+    }
+    catch (InvitadoMenordeEdad)
+    {
+      int id_i = Program.solicitar_id(); //excepcion manejada solicitando un nuevo id para verificar
+      verificar_invitado(id_i);
+    }
+    catch (CorreoInvalidoError)
+    {
+      int id_i = Program.solicitar_id(); //excepcion manejada solicitando un nuevo id para verificar
       verificar_invitado(id_i);
     }
 }

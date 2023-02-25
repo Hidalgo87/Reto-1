@@ -12,3 +12,25 @@ class InvitadoInexistenteError: Exception
     Console.WriteLine(message);
   }
 }
+
+class CorreoInvalidoError: Exception
+{
+  public CorreoInvalidoError(): base()
+  {
+  }
+  public CorreoInvalidoError(string message):base(message)
+  {
+    Console.WriteLine(message);
+  }
+}
+
+class InvitadoMenordeEdad:Exception
+{
+  public InvitadoMenordeEdad():base()
+  {
+  }
+  public InvitadoMenordeEdad(string message):base(message)
+  {
+    Console.WriteLine(message);
+  }
+}

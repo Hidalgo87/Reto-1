@@ -4,13 +4,13 @@ class Program
 {
   public static void Main (string[] args) 
   {
+    //string direccion = "Taller_herencia.txt"
     string direccion = "Taller_herencia.csv"; //Ingresar el path al archivo que se desee
     Controlador controlador = new Controlador();
     string separador = controlador.detectar_archivo(direccion);
     if (separador != null)
     {
     controlador.run(direccion, separador);
-    Console.WriteLine("Ingrese el ID del invitado a verificar");
     int id = solicitar_id();
     //int id = 39607678;
     controlador.verificar_invitado(id);
@@ -22,6 +22,7 @@ class Program
 
   public static int solicitar_id()
   {
+    Console.WriteLine("Ingrese el ID del invitado a verificar");
     try
     {
     int id = Convert.ToInt32(Console.ReadLine());

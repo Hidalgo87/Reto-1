@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/runner/Retos-1-PROFE/main.csproj",
+      "projectUniqueName": "/home/runner/Reto-1/main.csproj",
       "projectName": "main",
-      "projectPath": "/home/runner/Retos-1-PROFE/main.csproj",
+      "projectPath": "/home/runner/Reto-1/main.csproj",
       "packagesPath": "/home/runner/.nuget/packages/",
-      "outputPath": "/home/runner/Retos-1-PROFE/obj/",
+      "outputPath": "/home/runner/Reto-1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/runner/.nuget/NuGet/NuGet.Config"
