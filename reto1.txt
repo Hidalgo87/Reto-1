@@ -1,0 +1,13 @@
+* Se requiere un programa para controlar la entrada a un evento. Las personas de la taquilla necesitan verificar que los invitados estén adecuadamente registrados.
+* La persona de la taquilla verificará, usando el programa, que el invitado esté en el listado de invitados, que su email sea válido y que además, sea mayor de edad. Si el invitado cumple con estas condiciones, se dejará pasar al evento.
+* Un email válido es un email que se compone de cuatro partes: correo, conector, dominio y terminación. El correo es una cadena de caracteres que debe iniciar en un caracter alfabético; el único conector válido es el caracter "@" y siempre debe estar presente; el dominio debe estar siempre después del conector y debe estar dentro los dominios válidos -> "gmail", "hotmail" y "live"; las terminaciones válidas son ".com", ".co", ".edu.co", ".org".
+* Ejemplo email válido: xxUUU33@gmail.org
+* Ejemplo email inválido: 3xx_gmail
+* El programa consultará esta información desde un listado de invitados que puede estar en varios formatos, incluyendo txt separados por espacios y csv separados por coma. La estructura de la información, en todos sus formatos, es la misma: Nombre-Id-Email-Edad
+* El programa principal debe recibir una ruta donde está la lista de invitados para iniciar, debe extraer la información y organizarla en una estructura independiente al archivo (lista, tupla, diccionario, etc.) para su posterior consulta.
+* No puede preguntar el tipo de archivo antes de cargarlo, diseñe la lógica para que esta operación se haga de manera automática.
+
+-----------------------
+* Archivos: https://drive.google.com/drive/folders/1P3tblMAGapjgusYLk4AVBcYGGMFVSD78?usp=sharing
+* En esta actividad debe diseñar e implementar las clases que crea necesarias e incluir conceptos como herencia, clases abstractas y excepciones. Analice muy bien el problema, pregunte y pruebe mucho.
+* Incluya un diagrama de clases de su solución
